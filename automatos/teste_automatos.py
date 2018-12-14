@@ -50,9 +50,6 @@ teste2.cadeia_aceita(cadeia8)
 teste2.itera_cadeia(cadeia9, True)
 teste2.cadeia_aceita(cadeia9)
 
-teste2.itera_cadeia(cadeia9, True)
-teste2.cadeia_aceita(cadeia9)
-
 teste2.itera_cadeia(cadeia10, True)
 teste2.cadeia_aceita(cadeia10)
 

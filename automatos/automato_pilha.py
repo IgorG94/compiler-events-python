@@ -49,6 +49,10 @@ class AutomatoPilha():
         # {q0,b,@,q3}   -> Regra 2
         # {q1,&,$c,q0}  -> Regra 3
         # ...           -> Regra n
+        # @ -> Transição com símbolo
+        # & -> Transição em vazio, chamada de subrotina
+        # ${simbolo} -> Símbolo a ser empilhado
+        # * -> Desempilha topo da pilha
         try:
             self.arquivo2 = open(arq2, "r")
 
