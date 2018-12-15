@@ -1,0 +1,15 @@
+1000 REM Sequencia Fibonacci
+1010 REM ---------------------------- 
+2010 LET F0 = 0
+2020 PRINT F0
+2030 LET F1 = 1
+2040 PRINT F1
+2050 LET N = 0
+2060 REM Calcula proximo numero
+2070 LET F2 = F1 + F0
+2080 LET F0 = F1
+2090 LET F1 = F2
+2100 LET N = N + 1
+2110 PRINT F2
+2120 REM Parar apos 50 numeros
+2130 IF N < 50 THEN GOTO 2070

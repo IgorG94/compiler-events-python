@@ -1,74 +1,67 @@
 *** CÓDIGO FONTE ***
-Linha 1: #include <stdio.h>
-Linha 2: int main()
-Linha 3: {
-Linha 4:     double firstNumber, secondNumber, productOfTwoNumbers;
-Linha 5:     printf("Enter two numbers: ");
-Linha 6: 
-Linha 7:     // Stores two floating point numbers in variable firstNumber and secondNumber respectively
-Linha 8:     scanf("%lf %lf",&firstNumber, &secondNumber);
-Linha 9: 
-Linha 10:     // Performs multiplication and stores the result in variable productOfTwoNumbers
-Linha 11:     productOfTwoNumbers = firstNumber * secondNumber;
-Linha 12: 
-Linha 13:     // Result up to 2 decimal point is displayed using %.2lf
-Linha 14:     printf("Product = %.2lf", productofTwoNumbers);
-Linha 15: 
-Linha 16:     return 0;
-Linha 17: 
-Linha 18: }
+Linha 1: 1000 REM Sequencia Fibonacci
+Linha 2: 1010 REM ---------------------------- 
+Linha 3: 2010 LET F0 = 0
+Linha 4: 2020 PRINT F0
+Linha 5: 2030 LET F1 = 1
+Linha 6: 2040 PRINT F1
+Linha 7: 2050 LET N = 0
+Linha 8: 2060 REM Calcula proximo numero
+Linha 9: 2070 LET F2 = F1 + F0
+Linha 10: 2080 LET F0 = F1
+Linha 11: 2090 LET F1 = F2
+Linha 12: 2100 LET N = N + 1
+Linha 13: 2110 PRINT F2
+Linha 14: 2120 REM Parar apos 50 numeros
+Linha 15: 2130 IF N < 50 THEN GOTO 2070
 *** FIM DO CÓDIGO FONTE ***
 
 
 *** LISTA DE CARACTERES ***
-Caractere: '#', Tipo: especial
-Caractere: 'i', Tipo: letra
+Caractere: '1', Tipo: digito
+Caractere: '0', Tipo: digito
+Caractere: ' ', Tipo: espaco
+Caractere: 'R', Tipo: letra
+Caractere: 'E', Tipo: letra
+Caractere: 'M', Tipo: letra
+Caractere: 'S', Tipo: letra
+Caractere: 'e', Tipo: letra
+Caractere: 'q', Tipo: letra
+Caractere: 'u', Tipo: letra
 Caractere: 'n', Tipo: letra
 Caractere: 'c', Tipo: letra
-Caractere: 'l', Tipo: letra
-Caractere: 'u', Tipo: letra
-Caractere: 'd', Tipo: letra
-Caractere: 'e', Tipo: letra
-Caractere: ' ', Tipo: espaco
-Caractere: '<', Tipo: especial
-Caractere: 's', Tipo: letra
-Caractere: 't', Tipo: letra
-Caractere: 'o', Tipo: letra
-Caractere: '.', Tipo: especial
-Caractere: 'h', Tipo: letra
-Caractere: '>', Tipo: especial
-Caractere: 'm', Tipo: letra
+Caractere: 'i', Tipo: letra
 Caractere: 'a', Tipo: letra
-Caractere: '(', Tipo: especial
-Caractere: ')', Tipo: especial
-Caractere: '{', Tipo: especial
+Caractere: 'F', Tipo: letra
 Caractere: 'b', Tipo: letra
-Caractere: 'f', Tipo: letra
-Caractere: 'r', Tipo: letra
-Caractere: 'N', Tipo: letra
-Caractere: ',', Tipo: especial
-Caractere: 'p', Tipo: letra
-Caractere: 'O', Tipo: letra
-Caractere: 'T', Tipo: letra
-Caractere: 'w', Tipo: letra
-Caractere: ';', Tipo: especial
-Caractere: '"', Tipo: especial
-Caractere: 'E', Tipo: letra
-Caractere: ':', Tipo: especial
-Caractere: '/', Tipo: especial
-Caractere: 'S', Tipo: letra
-Caractere: 'g', Tipo: letra
-Caractere: 'v', Tipo: letra
-Caractere: 'y', Tipo: letra
-Caractere: '%', Tipo: especial
-Caractere: '&', Tipo: especial
-Caractere: 'P', Tipo: letra
-Caractere: '=', Tipo: especial
-Caractere: '*', Tipo: especial
-Caractere: 'R', Tipo: letra
+Caractere: 'o', Tipo: letra
+Caractere: '-', Tipo: especial
 Caractere: '2', Tipo: digito
-Caractere: '0', Tipo: digito
-Caractere: '}', Tipo: especial
+Caractere: 'L', Tipo: letra
+Caractere: 'T', Tipo: letra
+Caractere: '=', Tipo: especial
+Caractere: 'P', Tipo: letra
+Caractere: 'I', Tipo: letra
+Caractere: 'N', Tipo: letra
+Caractere: '3', Tipo: digito
+Caractere: '4', Tipo: digito
+Caractere: '5', Tipo: digito
+Caractere: '6', Tipo: digito
+Caractere: 'C', Tipo: letra
+Caractere: 'l', Tipo: letra
+Caractere: 'p', Tipo: letra
+Caractere: 'r', Tipo: letra
+Caractere: 'x', Tipo: letra
+Caractere: 'm', Tipo: letra
+Caractere: '7', Tipo: digito
+Caractere: '+', Tipo: especial
+Caractere: '8', Tipo: digito
+Caractere: '9', Tipo: digito
+Caractere: 's', Tipo: letra
+Caractere: '<', Tipo: especial
+Caractere: 'H', Tipo: letra
+Caractere: 'G', Tipo: letra
+Caractere: 'O', Tipo: letra
 *** FIM DA LISTA DE CARACTERES ***
 
 
@@ -400,223 +393,4 @@ Caractere: '}', Tipo: especial
 325 - Tipo do evento: ler_char | ID: 2
 326 - Tipo do evento: ler_char | ID: 2
 327 - Tipo do evento: ler_char | ID: 2
-328 - Tipo do evento: ler_char | ID: 2
-329 - Tipo do evento: ler_char | ID: 2
-330 - Tipo do evento: ler_char | ID: 2
-331 - Tipo do evento: ler_char | ID: 2
-332 - Tipo do evento: ler_char | ID: 2
-333 - Tipo do evento: ler_char | ID: 2
-334 - Tipo do evento: ler_char | ID: 2
-335 - Tipo do evento: ler_char | ID: 2
-336 - Tipo do evento: ler_char | ID: 2
-337 - Tipo do evento: ler_char | ID: 2
-338 - Tipo do evento: ler_char | ID: 2
-339 - Tipo do evento: ler_char | ID: 2
-340 - Tipo do evento: ler_char | ID: 2
-341 - Tipo do evento: ler_char | ID: 2
-342 - Tipo do evento: ler_char | ID: 2
-343 - Tipo do evento: ler_char | ID: 2
-344 - Tipo do evento: ler_char | ID: 2
-345 - Tipo do evento: ler_char | ID: 2
-346 - Tipo do evento: ler_char | ID: 2
-347 - Tipo do evento: ler_char | ID: 2
-348 - Tipo do evento: ler_char | ID: 2
-349 - Tipo do evento: ler_char | ID: 2
-350 - Tipo do evento: ler_char | ID: 2
-351 - Tipo do evento: ler_char | ID: 2
-352 - Tipo do evento: ler_char | ID: 2
-353 - Tipo do evento: ler_char | ID: 2
-354 - Tipo do evento: ler_char | ID: 2
-355 - Tipo do evento: ler_char | ID: 2
-356 - Tipo do evento: ler_char | ID: 2
-357 - Tipo do evento: ler_char | ID: 2
-358 - Tipo do evento: ler_char | ID: 2
-359 - Tipo do evento: ler_char | ID: 2
-360 - Tipo do evento: ler_char | ID: 2
-361 - Tipo do evento: ler_char | ID: 2
-362 - Tipo do evento: ler_char | ID: 2
-363 - Tipo do evento: ler_char | ID: 2
-364 - Tipo do evento: ler_char | ID: 2
-365 - Tipo do evento: ler_char | ID: 2
-366 - Tipo do evento: ler_char | ID: 2
-367 - Tipo do evento: ler_char | ID: 2
-368 - Tipo do evento: ler_char | ID: 2
-369 - Tipo do evento: ler_char | ID: 2
-370 - Tipo do evento: ler_char | ID: 2
-371 - Tipo do evento: ler_char | ID: 2
-372 - Tipo do evento: ler_char | ID: 2
-373 - Tipo do evento: ler_char | ID: 2
-374 - Tipo do evento: ler_char | ID: 2
-375 - Tipo do evento: ler_char | ID: 2
-376 - Tipo do evento: ler_char | ID: 2
-377 - Tipo do evento: ler_char | ID: 2
-378 - Tipo do evento: ler_char | ID: 2
-379 - Tipo do evento: ler_char | ID: 2
-380 - Tipo do evento: ler_char | ID: 2
-381 - Tipo do evento: ler_char | ID: 2
-382 - Tipo do evento: ler_char | ID: 2
-383 - Tipo do evento: ler_char | ID: 2
-384 - Tipo do evento: ler_char | ID: 2
-385 - Tipo do evento: ler_char | ID: 2
-386 - Tipo do evento: ler_char | ID: 2
-387 - Tipo do evento: ler_char | ID: 2
-388 - Tipo do evento: ler_char | ID: 2
-389 - Tipo do evento: ler_char | ID: 2
-390 - Tipo do evento: ler_char | ID: 2
-391 - Tipo do evento: ler_char | ID: 2
-392 - Tipo do evento: ler_char | ID: 2
-393 - Tipo do evento: ler_char | ID: 2
-394 - Tipo do evento: ler_char | ID: 2
-395 - Tipo do evento: ler_char | ID: 2
-396 - Tipo do evento: ler_char | ID: 2
-397 - Tipo do evento: ler_char | ID: 2
-398 - Tipo do evento: ler_char | ID: 2
-399 - Tipo do evento: ler_char | ID: 2
-400 - Tipo do evento: ler_char | ID: 2
-401 - Tipo do evento: ler_char | ID: 2
-402 - Tipo do evento: ler_char | ID: 2
-403 - Tipo do evento: ler_char | ID: 2
-404 - Tipo do evento: ler_char | ID: 2
-405 - Tipo do evento: ler_char | ID: 2
-406 - Tipo do evento: ler_char | ID: 2
-407 - Tipo do evento: ler_char | ID: 2
-408 - Tipo do evento: ler_char | ID: 2
-409 - Tipo do evento: ler_char | ID: 2
-410 - Tipo do evento: ler_char | ID: 2
-411 - Tipo do evento: ler_char | ID: 2
-412 - Tipo do evento: ler_char | ID: 2
-413 - Tipo do evento: ler_char | ID: 2
-414 - Tipo do evento: ler_char | ID: 2
-415 - Tipo do evento: ler_char | ID: 2
-416 - Tipo do evento: ler_char | ID: 2
-417 - Tipo do evento: ler_char | ID: 2
-418 - Tipo do evento: ler_char | ID: 2
-419 - Tipo do evento: ler_char | ID: 2
-420 - Tipo do evento: ler_char | ID: 2
-421 - Tipo do evento: ler_char | ID: 2
-422 - Tipo do evento: ler_char | ID: 2
-423 - Tipo do evento: ler_char | ID: 2
-424 - Tipo do evento: ler_char | ID: 2
-425 - Tipo do evento: ler_char | ID: 2
-426 - Tipo do evento: ler_char | ID: 2
-427 - Tipo do evento: ler_char | ID: 2
-428 - Tipo do evento: ler_char | ID: 2
-429 - Tipo do evento: ler_char | ID: 2
-430 - Tipo do evento: ler_char | ID: 2
-431 - Tipo do evento: ler_char | ID: 2
-432 - Tipo do evento: ler_char | ID: 2
-433 - Tipo do evento: ler_char | ID: 2
-434 - Tipo do evento: ler_char | ID: 2
-435 - Tipo do evento: ler_char | ID: 2
-436 - Tipo do evento: ler_char | ID: 2
-437 - Tipo do evento: ler_char | ID: 2
-438 - Tipo do evento: ler_char | ID: 2
-439 - Tipo do evento: ler_char | ID: 2
-440 - Tipo do evento: ler_char | ID: 2
-441 - Tipo do evento: ler_char | ID: 2
-442 - Tipo do evento: ler_char | ID: 2
-443 - Tipo do evento: ler_char | ID: 2
-444 - Tipo do evento: ler_char | ID: 2
-445 - Tipo do evento: ler_char | ID: 2
-446 - Tipo do evento: ler_char | ID: 2
-447 - Tipo do evento: ler_char | ID: 2
-448 - Tipo do evento: ler_char | ID: 2
-449 - Tipo do evento: ler_char | ID: 2
-450 - Tipo do evento: ler_char | ID: 2
-451 - Tipo do evento: ler_char | ID: 2
-452 - Tipo do evento: ler_char | ID: 2
-453 - Tipo do evento: ler_char | ID: 2
-454 - Tipo do evento: ler_char | ID: 2
-455 - Tipo do evento: ler_char | ID: 2
-456 - Tipo do evento: ler_char | ID: 2
-457 - Tipo do evento: ler_char | ID: 2
-458 - Tipo do evento: ler_char | ID: 2
-459 - Tipo do evento: ler_char | ID: 2
-460 - Tipo do evento: ler_char | ID: 2
-461 - Tipo do evento: ler_char | ID: 2
-462 - Tipo do evento: ler_char | ID: 2
-463 - Tipo do evento: ler_char | ID: 2
-464 - Tipo do evento: ler_char | ID: 2
-465 - Tipo do evento: ler_char | ID: 2
-466 - Tipo do evento: ler_char | ID: 2
-467 - Tipo do evento: ler_char | ID: 2
-468 - Tipo do evento: ler_char | ID: 2
-469 - Tipo do evento: ler_char | ID: 2
-470 - Tipo do evento: ler_char | ID: 2
-471 - Tipo do evento: ler_char | ID: 2
-472 - Tipo do evento: ler_char | ID: 2
-473 - Tipo do evento: ler_char | ID: 2
-474 - Tipo do evento: ler_char | ID: 2
-475 - Tipo do evento: ler_char | ID: 2
-476 - Tipo do evento: ler_char | ID: 2
-477 - Tipo do evento: ler_char | ID: 2
-478 - Tipo do evento: ler_char | ID: 2
-479 - Tipo do evento: ler_char | ID: 2
-480 - Tipo do evento: ler_char | ID: 2
-481 - Tipo do evento: ler_char | ID: 2
-482 - Tipo do evento: ler_char | ID: 2
-483 - Tipo do evento: ler_char | ID: 2
-484 - Tipo do evento: ler_char | ID: 2
-485 - Tipo do evento: ler_char | ID: 2
-486 - Tipo do evento: ler_char | ID: 2
-487 - Tipo do evento: ler_char | ID: 2
-488 - Tipo do evento: ler_char | ID: 2
-489 - Tipo do evento: ler_char | ID: 2
-490 - Tipo do evento: ler_char | ID: 2
-491 - Tipo do evento: ler_char | ID: 2
-492 - Tipo do evento: ler_char | ID: 2
-493 - Tipo do evento: ler_char | ID: 2
-494 - Tipo do evento: ler_char | ID: 2
-495 - Tipo do evento: ler_char | ID: 2
-496 - Tipo do evento: ler_char | ID: 2
-497 - Tipo do evento: ler_char | ID: 2
-498 - Tipo do evento: ler_char | ID: 2
-499 - Tipo do evento: ler_char | ID: 2
-500 - Tipo do evento: ler_char | ID: 2
-501 - Tipo do evento: ler_char | ID: 2
-502 - Tipo do evento: ler_char | ID: 2
-503 - Tipo do evento: ler_char | ID: 2
-504 - Tipo do evento: ler_char | ID: 2
-505 - Tipo do evento: ler_char | ID: 2
-506 - Tipo do evento: ler_char | ID: 2
-507 - Tipo do evento: ler_char | ID: 2
-508 - Tipo do evento: ler_char | ID: 2
-509 - Tipo do evento: ler_char | ID: 2
-510 - Tipo do evento: ler_char | ID: 2
-511 - Tipo do evento: ler_char | ID: 2
-512 - Tipo do evento: ler_char | ID: 2
-513 - Tipo do evento: ler_char | ID: 2
-514 - Tipo do evento: ler_char | ID: 2
-515 - Tipo do evento: ler_char | ID: 2
-516 - Tipo do evento: ler_char | ID: 2
-517 - Tipo do evento: ler_char | ID: 2
-518 - Tipo do evento: ler_char | ID: 2
-519 - Tipo do evento: ler_char | ID: 2
-520 - Tipo do evento: ler_char | ID: 2
-521 - Tipo do evento: ler_char | ID: 2
-522 - Tipo do evento: ler_char | ID: 2
-523 - Tipo do evento: ler_char | ID: 2
-524 - Tipo do evento: ler_char | ID: 2
-525 - Tipo do evento: ler_char | ID: 2
-526 - Tipo do evento: ler_char | ID: 2
-527 - Tipo do evento: ler_char | ID: 2
-528 - Tipo do evento: ler_char | ID: 2
-529 - Tipo do evento: ler_char | ID: 2
-530 - Tipo do evento: ler_char | ID: 2
-531 - Tipo do evento: ler_char | ID: 2
-532 - Tipo do evento: ler_char | ID: 2
-533 - Tipo do evento: ler_char | ID: 2
-534 - Tipo do evento: ler_char | ID: 2
-535 - Tipo do evento: ler_char | ID: 2
-536 - Tipo do evento: ler_char | ID: 2
-537 - Tipo do evento: ler_char | ID: 2
-538 - Tipo do evento: ler_char | ID: 2
-539 - Tipo do evento: ler_char | ID: 2
-540 - Tipo do evento: ler_char | ID: 2
-541 - Tipo do evento: ler_char | ID: 2
-542 - Tipo do evento: ler_char | ID: 2
-543 - Tipo do evento: ler_char | ID: 2
-544 - Tipo do evento: ler_char | ID: 2
-545 - Tipo do evento: ler_char | ID: 2
-546 - Tipo do evento: ler_char | ID: 2
 *** FIM DA LISTA DE EVENTOS ***

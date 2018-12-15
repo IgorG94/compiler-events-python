@@ -11,8 +11,8 @@ ler_codigo = Evento("ler_codigo", 1)
 ler_char = Evento("ler_char", 2)
 
 
-# Motor de eventos de análise léxica
-class AnalisadorLexico(NucleoMotorEventos):
+# Núcleo do decompositor de caracteres
+class DecompositorCaracteres(NucleoMotorEventos):
     def __init__(self):
         NucleoMotorEventos.__init__(self)
         # Variáveis auxiliares
@@ -59,26 +59,69 @@ class AnalisadorLexico(NucleoMotorEventos):
             # Caso o caractere seja uma letra
             if ((ascii_char >= 65 and ascii_char <= 90) or
                     (ascii_char >= 97 and ascii_char <= 122)):
-                tipo = "letra"
-                char = [char_atual, tipo]
+                tipo = "letter"
+                char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
             # Caso o caractere seja um dígito
             elif (ascii_char >= 48 and ascii_char <= 57):
-                tipo = "digito"
-                char = [char_atual, tipo]
+                tipo = "digit"
+                char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja um espaço
-            elif (ascii_char == 32):
-                tipo = "espaco"
-                char = [char_atual, tipo]
+            # Caso o caractere seja um espaço ou tabulação
+            elif (ascii_char == 32 or ascii_char == 9):
+                tipo = "whitespace"
+                char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja especial
+            # Caso o caractere seja de atribuição
+            elif (ascii_char == 61):
+                tipo = "assignment"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja de comparação (maior que)
+            elif (ascii_char == 62):
+                tipo = "compgreater"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja de comparação (menor que)
+            elif (ascii_char == 60):
+                tipo = "compless"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja de comparação (diferente)
+            elif (ascii_char == 33):
+                tipo = "compdiff"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja um operador aritmético
+            elif (ascii_char == 43 or ascii_char == 45 or ascii_char == 42 or
+                    ascii_char == 47 or ascii_char == 94):
+                tipo = "arithmetic"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja de pontuação
+            elif (ascii_char == 46 or ascii_char == 44 or ascii_char == 34):
+                tipo = "punctuation"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja delimitador (parênteses)
+            elif (ascii_char == 40 or ascii_char == 41):
+                tipo = "delimiter"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja especial (nenhuma das categorias acima)
             else:
-                tipo = "especial"
-                char = [char_atual, tipo]
+                tipo = "special"
+                char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
             # Se estiver ativado, imprime o caractere e seu código ASCII
@@ -90,6 +133,13 @@ class AnalisadorLexico(NucleoMotorEventos):
 
         # Caso tenha alcançado o fim da linha, insere-a na lista de linhas
         else:
+            tipo = "whitespace"
+            char = [" ", tipo, self.linha_atual[1]]
+            if (self.imprime_caracteres):
+                print(char[0], ": ", ord(char[0]), ", ", char[1])
+            self.insere_caractere(char)
+
+            # Inserção na lista de linhas
             self.lista_linhas.append(list(self.linha_atual))
 
             # Se estiver ativado, imprime a linha
@@ -107,12 +157,7 @@ class AnalisadorLexico(NucleoMotorEventos):
 
     # Função que insere caractere na lista de caracteres, sem repetir
     def insere_caractere(self, char):
-        char_presente = False
-        for caractere in self.lista_caracteres:
-            if (char[0] == caractere[0]):
-                char_presente = True
-        if (not char_presente):
-            self.lista_caracteres.append(char)
+        self.lista_caracteres.append(char)
 
     # Função que roda o motor de eventos, recebendo um arquivo .txt com um
     # código fonte e realizando a simulação
@@ -153,6 +198,11 @@ class AnalisadorLexico(NucleoMotorEventos):
                 print("Evento ", evento.nome, "não existe!")
             i += 1
 
+        # Insere whitespace ao final da lista de caracteres
+        tipo = "whitespace"
+        char = [" ", tipo, self.linha_atual[1]]
+        self.insere_caractere(char)
+
         # Se a impressao de Eventos no terminal estiver ativada
         if (imprime_eventos):
             self.imprime_lista_eventos()
@@ -164,12 +214,12 @@ class AnalisadorLexico(NucleoMotorEventos):
     # Funcao que imprime em um arquivo .txt os caracteres (com seus respectivos
     # tipos), as linhas e os eventos (com seus respectivos tipos)
     def imprime_arquivo_saida(self):
-        arq_saida = open("saida_analisador_lexico.txt", "w")
+        arq_saida = open("saida_decompositor_caracteres.txt", "w")
 
         # 1 - Impressão do código fonte
         arq_saida.write("*** CÓDIGO FONTE ***\n")
         for i in range(len(self.lista_linhas)):
-            linha = f"Linha {i + 1}: {self.lista_linhas[i][0]}"
+            linha = "Linha " + str(i+1) + ": " + str(self.lista_linhas[i][0])
             arq_saida.write(linha)
             arq_saida.write("\n")
         arq_saida.write("*** FIM DO CÓDIGO FONTE ***\n\n\n")
@@ -179,18 +229,10 @@ class AnalisadorLexico(NucleoMotorEventos):
         for i in range(len(self.lista_caracteres)):
             char = self.lista_caracteres[i][0]
             tipo = self.lista_caracteres[i][1]
-            linha = f"Caractere: '{char}', Tipo: {tipo}\n"
-            arq_saida.write(linha)
+            linha = self.lista_caracteres[i][2]
+            aux = ("Caractere: '" + str(char) + "', Tipo: " + str(tipo) +
+                   ", Linha: " + str(linha) + "\n")
+            arq_saida.write(aux)
         arq_saida.write("*** FIM DA LISTA DE CARACTERES ***\n\n\n")
 
-        # 3 - Impressão da lista de eventos
-        arq_saida.write("*** LISTA DE EVENTOS ***\n")
-        for i in range(len(self.lista_eventos)):
-            evento = self.lista_eventos[i]
-            linha = (
-                f"{i+1} - Tipo do evento: {evento.nome} | ID: {evento.ident}"
-            )
-            arq_saida.write(linha)
-            arq_saida.write('\n')
-        arq_saida.write("*** FIM DA LISTA DE EVENTOS ***")
         arq_saida.close()
