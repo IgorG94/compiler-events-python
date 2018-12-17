@@ -93,28 +93,45 @@ class DecompositorCaracteres(NucleoMotorEventos):
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja de comparação (diferente)
-            elif (ascii_char == 33):
-                tipo = "compdiff"
+            # Caso o caractere seja um operador aritmético de soma ou subtração
+            elif (ascii_char == 43 or ascii_char == 45):
+                tipo = "arithmeticplusminus"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja um operador aritmético
-            elif (ascii_char == 43 or ascii_char == 45 or ascii_char == 42 or
-                    ascii_char == 47 or ascii_char == 94):
-                tipo = "arithmetic"
+            # Caso o caractere seja outro operador aritmético
+            elif (ascii_char == 42 or ascii_char == 47 or ascii_char == 94):
+                tipo = "arithmeticother"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja de pontuação
-            elif (ascii_char == 46 or ascii_char == 44 or ascii_char == 34):
-                tipo = "punctuation"
+            # Caso o caractere seja um ponto
+            elif (ascii_char == 46):
+                tipo = "dot"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja delimitador (parênteses)
-            elif (ascii_char == 40 or ascii_char == 41):
-                tipo = "delimiter"
+            # Caso o caractere seja uma vírgula
+            elif (ascii_char == 44):
+                tipo = "comma"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja aspas
+            elif (ascii_char == 34):
+                tipo = "quotmark"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja delimitador (abre-parênteses)
+            elif (ascii_char == 40):
+                tipo = "delimiteropen"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja delimitador (abre-parênteses)
+            elif (ascii_char == 41):
+                tipo = "delimiterclose"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 

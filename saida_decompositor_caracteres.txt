@@ -1,19 +1,18 @@
 *** CÓDIGO FONTE ***
 Linha 1: 1000 REM Sequencia Fibonacci
-Linha 2: 1010 REM ---------------------------- 
-Linha 3: 2010 LET F0 = 0
-Linha 4: 2020 PRINT F0
-Linha 5: 2030 LET F1 = 1
-Linha 6: 2040 PRINT F1
-Linha 7: 2050 LET N = 0
-Linha 8: 2060 REM Calcula proximo numero
-Linha 9: 2070 LET F2 = F1 + F0
-Linha 10: 2080 LET F0 = F1
-Linha 11: 2090 LET F1 = F2
-Linha 12: 2100 LET N = N + 1
-Linha 13: 2110 PRINT F2
-Linha 14: 2120 REM Parar apos 50 numeros
-Linha 15: 2130 IF N < 50 THEN GOTO 2070
+Linha 2: 2010 LET F0 = 0
+Linha 3: 2020 PRINT F0
+Linha 4: 2030 LET F1 = 1
+Linha 5: 2040 PRINT F1
+Linha 6: 2050 LET N = 0
+Linha 7: 2060 REM Calcula proximo numero
+Linha 8: 2070 LET F2 = F1 + F0
+Linha 9: 2080 LET F0 = F1
+Linha 10: 2090 LET F1 = F2
+Linha 11: 2100 LET N = N + 1
+Linha 12: 2110 PRINT F2
+Linha 13: 2120 REM Parar apos 50 numeros
+Linha 14: 2130 IF N < 50 THEN GOTO 2070
 *** FIM DO CÓDIGO FONTE ***
 
 
@@ -47,155 +46,138 @@ Caractere: 'c', Tipo: letter, Linha: 1
 Caractere: 'c', Tipo: letter, Linha: 1
 Caractere: 'i', Tipo: letter, Linha: 1
 Caractere: ' ', Tipo: whitespace, Linha: 1
-Caractere: '1', Tipo: digit, Linha: 2
+Caractere: '2', Tipo: digit, Linha: 2
 Caractere: '0', Tipo: digit, Linha: 2
 Caractere: '1', Tipo: digit, Linha: 2
 Caractere: '0', Tipo: digit, Linha: 2
 Caractere: ' ', Tipo: whitespace, Linha: 2
-Caractere: 'R', Tipo: letter, Linha: 2
+Caractere: 'L', Tipo: letter, Linha: 2
 Caractere: 'E', Tipo: letter, Linha: 2
-Caractere: 'M', Tipo: letter, Linha: 2
+Caractere: 'T', Tipo: letter, Linha: 2
 Caractere: ' ', Tipo: whitespace, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
-Caractere: '-', Tipo: arithmetic, Linha: 2
+Caractere: 'F', Tipo: letter, Linha: 2
+Caractere: '0', Tipo: digit, Linha: 2
 Caractere: ' ', Tipo: whitespace, Linha: 2
+Caractere: '=', Tipo: assignment, Linha: 2
+Caractere: ' ', Tipo: whitespace, Linha: 2
+Caractere: '0', Tipo: digit, Linha: 2
 Caractere: ' ', Tipo: whitespace, Linha: 2
 Caractere: '2', Tipo: digit, Linha: 3
 Caractere: '0', Tipo: digit, Linha: 3
-Caractere: '1', Tipo: digit, Linha: 3
+Caractere: '2', Tipo: digit, Linha: 3
 Caractere: '0', Tipo: digit, Linha: 3
 Caractere: ' ', Tipo: whitespace, Linha: 3
-Caractere: 'L', Tipo: letter, Linha: 3
-Caractere: 'E', Tipo: letter, Linha: 3
+Caractere: 'P', Tipo: letter, Linha: 3
+Caractere: 'R', Tipo: letter, Linha: 3
+Caractere: 'I', Tipo: letter, Linha: 3
+Caractere: 'N', Tipo: letter, Linha: 3
 Caractere: 'T', Tipo: letter, Linha: 3
 Caractere: ' ', Tipo: whitespace, Linha: 3
 Caractere: 'F', Tipo: letter, Linha: 3
 Caractere: '0', Tipo: digit, Linha: 3
 Caractere: ' ', Tipo: whitespace, Linha: 3
-Caractere: '=', Tipo: assignment, Linha: 3
-Caractere: ' ', Tipo: whitespace, Linha: 3
-Caractere: '0', Tipo: digit, Linha: 3
-Caractere: ' ', Tipo: whitespace, Linha: 3
 Caractere: '2', Tipo: digit, Linha: 4
 Caractere: '0', Tipo: digit, Linha: 4
-Caractere: '2', Tipo: digit, Linha: 4
+Caractere: '3', Tipo: digit, Linha: 4
 Caractere: '0', Tipo: digit, Linha: 4
 Caractere: ' ', Tipo: whitespace, Linha: 4
-Caractere: 'P', Tipo: letter, Linha: 4
-Caractere: 'R', Tipo: letter, Linha: 4
-Caractere: 'I', Tipo: letter, Linha: 4
-Caractere: 'N', Tipo: letter, Linha: 4
+Caractere: 'L', Tipo: letter, Linha: 4
+Caractere: 'E', Tipo: letter, Linha: 4
 Caractere: 'T', Tipo: letter, Linha: 4
 Caractere: ' ', Tipo: whitespace, Linha: 4
 Caractere: 'F', Tipo: letter, Linha: 4
-Caractere: '0', Tipo: digit, Linha: 4
+Caractere: '1', Tipo: digit, Linha: 4
+Caractere: ' ', Tipo: whitespace, Linha: 4
+Caractere: '=', Tipo: assignment, Linha: 4
+Caractere: ' ', Tipo: whitespace, Linha: 4
+Caractere: '1', Tipo: digit, Linha: 4
 Caractere: ' ', Tipo: whitespace, Linha: 4
 Caractere: '2', Tipo: digit, Linha: 5
 Caractere: '0', Tipo: digit, Linha: 5
-Caractere: '3', Tipo: digit, Linha: 5
+Caractere: '4', Tipo: digit, Linha: 5
 Caractere: '0', Tipo: digit, Linha: 5
 Caractere: ' ', Tipo: whitespace, Linha: 5
-Caractere: 'L', Tipo: letter, Linha: 5
-Caractere: 'E', Tipo: letter, Linha: 5
+Caractere: 'P', Tipo: letter, Linha: 5
+Caractere: 'R', Tipo: letter, Linha: 5
+Caractere: 'I', Tipo: letter, Linha: 5
+Caractere: 'N', Tipo: letter, Linha: 5
 Caractere: 'T', Tipo: letter, Linha: 5
 Caractere: ' ', Tipo: whitespace, Linha: 5
 Caractere: 'F', Tipo: letter, Linha: 5
 Caractere: '1', Tipo: digit, Linha: 5
 Caractere: ' ', Tipo: whitespace, Linha: 5
-Caractere: '=', Tipo: assignment, Linha: 5
-Caractere: ' ', Tipo: whitespace, Linha: 5
-Caractere: '1', Tipo: digit, Linha: 5
-Caractere: ' ', Tipo: whitespace, Linha: 5
 Caractere: '2', Tipo: digit, Linha: 6
 Caractere: '0', Tipo: digit, Linha: 6
-Caractere: '4', Tipo: digit, Linha: 6
+Caractere: '5', Tipo: digit, Linha: 6
 Caractere: '0', Tipo: digit, Linha: 6
 Caractere: ' ', Tipo: whitespace, Linha: 6
-Caractere: 'P', Tipo: letter, Linha: 6
-Caractere: 'R', Tipo: letter, Linha: 6
-Caractere: 'I', Tipo: letter, Linha: 6
-Caractere: 'N', Tipo: letter, Linha: 6
+Caractere: 'L', Tipo: letter, Linha: 6
+Caractere: 'E', Tipo: letter, Linha: 6
 Caractere: 'T', Tipo: letter, Linha: 6
 Caractere: ' ', Tipo: whitespace, Linha: 6
-Caractere: 'F', Tipo: letter, Linha: 6
-Caractere: '1', Tipo: digit, Linha: 6
+Caractere: 'N', Tipo: letter, Linha: 6
+Caractere: ' ', Tipo: whitespace, Linha: 6
+Caractere: '=', Tipo: assignment, Linha: 6
+Caractere: ' ', Tipo: whitespace, Linha: 6
+Caractere: '0', Tipo: digit, Linha: 6
 Caractere: ' ', Tipo: whitespace, Linha: 6
 Caractere: '2', Tipo: digit, Linha: 7
 Caractere: '0', Tipo: digit, Linha: 7
-Caractere: '5', Tipo: digit, Linha: 7
+Caractere: '6', Tipo: digit, Linha: 7
 Caractere: '0', Tipo: digit, Linha: 7
 Caractere: ' ', Tipo: whitespace, Linha: 7
-Caractere: 'L', Tipo: letter, Linha: 7
+Caractere: 'R', Tipo: letter, Linha: 7
 Caractere: 'E', Tipo: letter, Linha: 7
-Caractere: 'T', Tipo: letter, Linha: 7
+Caractere: 'M', Tipo: letter, Linha: 7
 Caractere: ' ', Tipo: whitespace, Linha: 7
-Caractere: 'N', Tipo: letter, Linha: 7
+Caractere: 'C', Tipo: letter, Linha: 7
+Caractere: 'a', Tipo: letter, Linha: 7
+Caractere: 'l', Tipo: letter, Linha: 7
+Caractere: 'c', Tipo: letter, Linha: 7
+Caractere: 'u', Tipo: letter, Linha: 7
+Caractere: 'l', Tipo: letter, Linha: 7
+Caractere: 'a', Tipo: letter, Linha: 7
 Caractere: ' ', Tipo: whitespace, Linha: 7
-Caractere: '=', Tipo: assignment, Linha: 7
+Caractere: 'p', Tipo: letter, Linha: 7
+Caractere: 'r', Tipo: letter, Linha: 7
+Caractere: 'o', Tipo: letter, Linha: 7
+Caractere: 'x', Tipo: letter, Linha: 7
+Caractere: 'i', Tipo: letter, Linha: 7
+Caractere: 'm', Tipo: letter, Linha: 7
+Caractere: 'o', Tipo: letter, Linha: 7
 Caractere: ' ', Tipo: whitespace, Linha: 7
-Caractere: '0', Tipo: digit, Linha: 7
+Caractere: 'n', Tipo: letter, Linha: 7
+Caractere: 'u', Tipo: letter, Linha: 7
+Caractere: 'm', Tipo: letter, Linha: 7
+Caractere: 'e', Tipo: letter, Linha: 7
+Caractere: 'r', Tipo: letter, Linha: 7
+Caractere: 'o', Tipo: letter, Linha: 7
 Caractere: ' ', Tipo: whitespace, Linha: 7
 Caractere: '2', Tipo: digit, Linha: 8
 Caractere: '0', Tipo: digit, Linha: 8
-Caractere: '6', Tipo: digit, Linha: 8
+Caractere: '7', Tipo: digit, Linha: 8
 Caractere: '0', Tipo: digit, Linha: 8
 Caractere: ' ', Tipo: whitespace, Linha: 8
-Caractere: 'R', Tipo: letter, Linha: 8
+Caractere: 'L', Tipo: letter, Linha: 8
 Caractere: 'E', Tipo: letter, Linha: 8
-Caractere: 'M', Tipo: letter, Linha: 8
+Caractere: 'T', Tipo: letter, Linha: 8
 Caractere: ' ', Tipo: whitespace, Linha: 8
-Caractere: 'C', Tipo: letter, Linha: 8
-Caractere: 'a', Tipo: letter, Linha: 8
-Caractere: 'l', Tipo: letter, Linha: 8
-Caractere: 'c', Tipo: letter, Linha: 8
-Caractere: 'u', Tipo: letter, Linha: 8
-Caractere: 'l', Tipo: letter, Linha: 8
-Caractere: 'a', Tipo: letter, Linha: 8
+Caractere: 'F', Tipo: letter, Linha: 8
+Caractere: '2', Tipo: digit, Linha: 8
 Caractere: ' ', Tipo: whitespace, Linha: 8
-Caractere: 'p', Tipo: letter, Linha: 8
-Caractere: 'r', Tipo: letter, Linha: 8
-Caractere: 'o', Tipo: letter, Linha: 8
-Caractere: 'x', Tipo: letter, Linha: 8
-Caractere: 'i', Tipo: letter, Linha: 8
-Caractere: 'm', Tipo: letter, Linha: 8
-Caractere: 'o', Tipo: letter, Linha: 8
+Caractere: '=', Tipo: assignment, Linha: 8
 Caractere: ' ', Tipo: whitespace, Linha: 8
-Caractere: 'n', Tipo: letter, Linha: 8
-Caractere: 'u', Tipo: letter, Linha: 8
-Caractere: 'm', Tipo: letter, Linha: 8
-Caractere: 'e', Tipo: letter, Linha: 8
-Caractere: 'r', Tipo: letter, Linha: 8
-Caractere: 'o', Tipo: letter, Linha: 8
+Caractere: 'F', Tipo: letter, Linha: 8
+Caractere: '1', Tipo: digit, Linha: 8
+Caractere: ' ', Tipo: whitespace, Linha: 8
+Caractere: '+', Tipo: arithmeticplusminus, Linha: 8
+Caractere: ' ', Tipo: whitespace, Linha: 8
+Caractere: 'F', Tipo: letter, Linha: 8
+Caractere: '0', Tipo: digit, Linha: 8
 Caractere: ' ', Tipo: whitespace, Linha: 8
 Caractere: '2', Tipo: digit, Linha: 9
 Caractere: '0', Tipo: digit, Linha: 9
-Caractere: '7', Tipo: digit, Linha: 9
+Caractere: '8', Tipo: digit, Linha: 9
 Caractere: '0', Tipo: digit, Linha: 9
 Caractere: ' ', Tipo: whitespace, Linha: 9
 Caractere: 'L', Tipo: letter, Linha: 9
@@ -203,21 +185,16 @@ Caractere: 'E', Tipo: letter, Linha: 9
 Caractere: 'T', Tipo: letter, Linha: 9
 Caractere: ' ', Tipo: whitespace, Linha: 9
 Caractere: 'F', Tipo: letter, Linha: 9
-Caractere: '2', Tipo: digit, Linha: 9
+Caractere: '0', Tipo: digit, Linha: 9
 Caractere: ' ', Tipo: whitespace, Linha: 9
 Caractere: '=', Tipo: assignment, Linha: 9
 Caractere: ' ', Tipo: whitespace, Linha: 9
 Caractere: 'F', Tipo: letter, Linha: 9
 Caractere: '1', Tipo: digit, Linha: 9
 Caractere: ' ', Tipo: whitespace, Linha: 9
-Caractere: '+', Tipo: arithmetic, Linha: 9
-Caractere: ' ', Tipo: whitespace, Linha: 9
-Caractere: 'F', Tipo: letter, Linha: 9
-Caractere: '0', Tipo: digit, Linha: 9
-Caractere: ' ', Tipo: whitespace, Linha: 9
 Caractere: '2', Tipo: digit, Linha: 10
 Caractere: '0', Tipo: digit, Linha: 10
-Caractere: '8', Tipo: digit, Linha: 10
+Caractere: '9', Tipo: digit, Linha: 10
 Caractere: '0', Tipo: digit, Linha: 10
 Caractere: ' ', Tipo: whitespace, Linha: 10
 Caractere: 'L', Tipo: letter, Linha: 10
@@ -225,125 +202,108 @@ Caractere: 'E', Tipo: letter, Linha: 10
 Caractere: 'T', Tipo: letter, Linha: 10
 Caractere: ' ', Tipo: whitespace, Linha: 10
 Caractere: 'F', Tipo: letter, Linha: 10
-Caractere: '0', Tipo: digit, Linha: 10
+Caractere: '1', Tipo: digit, Linha: 10
 Caractere: ' ', Tipo: whitespace, Linha: 10
 Caractere: '=', Tipo: assignment, Linha: 10
 Caractere: ' ', Tipo: whitespace, Linha: 10
 Caractere: 'F', Tipo: letter, Linha: 10
-Caractere: '1', Tipo: digit, Linha: 10
+Caractere: '2', Tipo: digit, Linha: 10
 Caractere: ' ', Tipo: whitespace, Linha: 10
 Caractere: '2', Tipo: digit, Linha: 11
+Caractere: '1', Tipo: digit, Linha: 11
 Caractere: '0', Tipo: digit, Linha: 11
-Caractere: '9', Tipo: digit, Linha: 11
 Caractere: '0', Tipo: digit, Linha: 11
 Caractere: ' ', Tipo: whitespace, Linha: 11
 Caractere: 'L', Tipo: letter, Linha: 11
 Caractere: 'E', Tipo: letter, Linha: 11
 Caractere: 'T', Tipo: letter, Linha: 11
 Caractere: ' ', Tipo: whitespace, Linha: 11
-Caractere: 'F', Tipo: letter, Linha: 11
-Caractere: '1', Tipo: digit, Linha: 11
+Caractere: 'N', Tipo: letter, Linha: 11
 Caractere: ' ', Tipo: whitespace, Linha: 11
 Caractere: '=', Tipo: assignment, Linha: 11
 Caractere: ' ', Tipo: whitespace, Linha: 11
-Caractere: 'F', Tipo: letter, Linha: 11
-Caractere: '2', Tipo: digit, Linha: 11
+Caractere: 'N', Tipo: letter, Linha: 11
+Caractere: ' ', Tipo: whitespace, Linha: 11
+Caractere: '+', Tipo: arithmeticplusminus, Linha: 11
+Caractere: ' ', Tipo: whitespace, Linha: 11
+Caractere: '1', Tipo: digit, Linha: 11
 Caractere: ' ', Tipo: whitespace, Linha: 11
 Caractere: '2', Tipo: digit, Linha: 12
 Caractere: '1', Tipo: digit, Linha: 12
-Caractere: '0', Tipo: digit, Linha: 12
+Caractere: '1', Tipo: digit, Linha: 12
 Caractere: '0', Tipo: digit, Linha: 12
 Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: 'L', Tipo: letter, Linha: 12
-Caractere: 'E', Tipo: letter, Linha: 12
+Caractere: 'P', Tipo: letter, Linha: 12
+Caractere: 'R', Tipo: letter, Linha: 12
+Caractere: 'I', Tipo: letter, Linha: 12
+Caractere: 'N', Tipo: letter, Linha: 12
 Caractere: 'T', Tipo: letter, Linha: 12
 Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: 'N', Tipo: letter, Linha: 12
-Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: '=', Tipo: assignment, Linha: 12
-Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: 'N', Tipo: letter, Linha: 12
-Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: '+', Tipo: arithmetic, Linha: 12
-Caractere: ' ', Tipo: whitespace, Linha: 12
-Caractere: '1', Tipo: digit, Linha: 12
+Caractere: 'F', Tipo: letter, Linha: 12
+Caractere: '2', Tipo: digit, Linha: 12
 Caractere: ' ', Tipo: whitespace, Linha: 12
 Caractere: '2', Tipo: digit, Linha: 13
 Caractere: '1', Tipo: digit, Linha: 13
-Caractere: '1', Tipo: digit, Linha: 13
+Caractere: '2', Tipo: digit, Linha: 13
 Caractere: '0', Tipo: digit, Linha: 13
 Caractere: ' ', Tipo: whitespace, Linha: 13
-Caractere: 'P', Tipo: letter, Linha: 13
 Caractere: 'R', Tipo: letter, Linha: 13
-Caractere: 'I', Tipo: letter, Linha: 13
-Caractere: 'N', Tipo: letter, Linha: 13
-Caractere: 'T', Tipo: letter, Linha: 13
+Caractere: 'E', Tipo: letter, Linha: 13
+Caractere: 'M', Tipo: letter, Linha: 13
 Caractere: ' ', Tipo: whitespace, Linha: 13
-Caractere: 'F', Tipo: letter, Linha: 13
-Caractere: '2', Tipo: digit, Linha: 13
+Caractere: 'P', Tipo: letter, Linha: 13
+Caractere: 'a', Tipo: letter, Linha: 13
+Caractere: 'r', Tipo: letter, Linha: 13
+Caractere: 'a', Tipo: letter, Linha: 13
+Caractere: 'r', Tipo: letter, Linha: 13
+Caractere: ' ', Tipo: whitespace, Linha: 13
+Caractere: 'a', Tipo: letter, Linha: 13
+Caractere: 'p', Tipo: letter, Linha: 13
+Caractere: 'o', Tipo: letter, Linha: 13
+Caractere: 's', Tipo: letter, Linha: 13
+Caractere: ' ', Tipo: whitespace, Linha: 13
+Caractere: '5', Tipo: digit, Linha: 13
+Caractere: '0', Tipo: digit, Linha: 13
+Caractere: ' ', Tipo: whitespace, Linha: 13
+Caractere: 'n', Tipo: letter, Linha: 13
+Caractere: 'u', Tipo: letter, Linha: 13
+Caractere: 'm', Tipo: letter, Linha: 13
+Caractere: 'e', Tipo: letter, Linha: 13
+Caractere: 'r', Tipo: letter, Linha: 13
+Caractere: 'o', Tipo: letter, Linha: 13
+Caractere: 's', Tipo: letter, Linha: 13
 Caractere: ' ', Tipo: whitespace, Linha: 13
 Caractere: '2', Tipo: digit, Linha: 14
 Caractere: '1', Tipo: digit, Linha: 14
-Caractere: '2', Tipo: digit, Linha: 14
+Caractere: '3', Tipo: digit, Linha: 14
 Caractere: '0', Tipo: digit, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
-Caractere: 'R', Tipo: letter, Linha: 14
-Caractere: 'E', Tipo: letter, Linha: 14
-Caractere: 'M', Tipo: letter, Linha: 14
+Caractere: 'I', Tipo: letter, Linha: 14
+Caractere: 'F', Tipo: letter, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
-Caractere: 'P', Tipo: letter, Linha: 14
-Caractere: 'a', Tipo: letter, Linha: 14
-Caractere: 'r', Tipo: letter, Linha: 14
-Caractere: 'a', Tipo: letter, Linha: 14
-Caractere: 'r', Tipo: letter, Linha: 14
+Caractere: 'N', Tipo: letter, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
-Caractere: 'a', Tipo: letter, Linha: 14
-Caractere: 'p', Tipo: letter, Linha: 14
-Caractere: 'o', Tipo: letter, Linha: 14
-Caractere: 's', Tipo: letter, Linha: 14
+Caractere: '<', Tipo: compless, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
 Caractere: '5', Tipo: digit, Linha: 14
 Caractere: '0', Tipo: digit, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
-Caractere: 'n', Tipo: letter, Linha: 14
-Caractere: 'u', Tipo: letter, Linha: 14
-Caractere: 'm', Tipo: letter, Linha: 14
-Caractere: 'e', Tipo: letter, Linha: 14
-Caractere: 'r', Tipo: letter, Linha: 14
-Caractere: 'o', Tipo: letter, Linha: 14
-Caractere: 's', Tipo: letter, Linha: 14
+Caractere: 'T', Tipo: letter, Linha: 14
+Caractere: 'H', Tipo: letter, Linha: 14
+Caractere: 'E', Tipo: letter, Linha: 14
+Caractere: 'N', Tipo: letter, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 14
-Caractere: '2', Tipo: digit, Linha: 15
-Caractere: '1', Tipo: digit, Linha: 15
-Caractere: '3', Tipo: digit, Linha: 15
-Caractere: '0', Tipo: digit, Linha: 15
+Caractere: 'G', Tipo: letter, Linha: 14
+Caractere: 'O', Tipo: letter, Linha: 14
+Caractere: 'T', Tipo: letter, Linha: 14
+Caractere: 'O', Tipo: letter, Linha: 14
+Caractere: ' ', Tipo: whitespace, Linha: 14
+Caractere: '2', Tipo: digit, Linha: 14
+Caractere: '0', Tipo: digit, Linha: 14
+Caractere: '7', Tipo: digit, Linha: 14
+Caractere: '0', Tipo: digit, Linha: 14
+Caractere: ' ', Tipo: whitespace, Linha: 14
 Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: 'I', Tipo: letter, Linha: 15
-Caractere: 'F', Tipo: letter, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: 'N', Tipo: letter, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: '<', Tipo: compless, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: '5', Tipo: digit, Linha: 15
-Caractere: '0', Tipo: digit, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: 'T', Tipo: letter, Linha: 15
-Caractere: 'H', Tipo: letter, Linha: 15
-Caractere: 'E', Tipo: letter, Linha: 15
-Caractere: 'N', Tipo: letter, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: 'G', Tipo: letter, Linha: 15
-Caractere: 'O', Tipo: letter, Linha: 15
-Caractere: 'T', Tipo: letter, Linha: 15
-Caractere: 'O', Tipo: letter, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: '2', Tipo: digit, Linha: 15
-Caractere: '0', Tipo: digit, Linha: 15
-Caractere: '7', Tipo: digit, Linha: 15
-Caractere: '0', Tipo: digit, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 15
-Caractere: ' ', Tipo: whitespace, Linha: 16
 *** FIM DA LISTA DE CARACTERES ***
 
 

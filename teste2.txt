@@ -1,5 +1,4 @@
 1000 REM Sequencia Fibonacci
-1010 REM ---------------------------- 
 2010 LET F0 = 0
 2020 PRINT F0
 2030 LET F1 = 1
