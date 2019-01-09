@@ -1,0 +1,24 @@
+Program = BStatement { BStatement } int "END" .
+BStatement = int ( Assign | Read | Data | Print | Goto | If | For | Next | Dim | Def | Gosub | Return | Remark ) .
+Assign = "LET" Var "=" Exp .
+Var = Letter Digit | Letter [ "(" Exp { "," Exp } ")" ] .
+Exp = { "+" | "-" } Eb { ( "+" | "-" | "*" | "/" | "^" ) Eb } .
+Eb = "(" Exp ")" | Num | Var | ( "FN" Letter | Predef ) "(" Exp ")" .
+Predef = "SIN" | "COS" | "TAN" | "ATN" | "EXP" | "ABS" | "LOG" | "SQR" | "INT" | "RND" .
+Read = "READ" Var { "," Var } .
+Data = "DATA" Snum { "," Snum } .
+Print = "PRINT" [ Pitem { "," Pitem } [ "," ] ] .
+Pitem = Exp | """ Character { Character } """ [ Exp ] .
+Goto = ( "GOTO" | "GO" "TO" ) int .
+If = "IF" Exp ( ">=" | ">" | "<>" | "<" | "<=" | "==" ) Exp "THEN" int .
+For = "FOR" Letter [ Digit ] "=" Exp "TO" Exp [ "STEP" Exp ] .
+Next = "NEXT" Letter [ Digit ] .
+Dim = "DIM" Letter "(" int { "," int } ")" { "," Letter "(" int { "," int } ")" } .
+Def = "DEF" "FN" Letter "(" Letter [ Digit ] ")" "=" Exp .
+Gosub = "GOSUB" int .
+Return = "RETURN" .
+Remark = "REM" { Character } .
+Int = Digit { Digit } .
+Num = ( int [ "." { Digit }  ] | "." int ) [ "E" [ "+" | "-" ] int ] .
+Snum = [ "+" | "-" ] Num .
+Character = Letter | Digit | Special .

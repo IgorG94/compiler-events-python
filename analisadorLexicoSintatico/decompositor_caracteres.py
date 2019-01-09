@@ -125,19 +125,38 @@ class DecompositorCaracteres(NucleoMotorEventos):
 
             # Caso o caractere seja delimitador (abre-parênteses)
             elif (ascii_char == 40):
-                tipo = "delimiteropen"
+                tipo = "delimiter("
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja delimitador (abre-parênteses)
+            # Caso o caractere seja delimitador (fecha-parênteses)
             elif (ascii_char == 41):
-                tipo = "delimiterclose"
+                tipo = "delimiter)"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 
-            # Caso o caractere seja especial (nenhuma das categorias acima)
-            else:
+            # Caso o caractere seja [, ], { ou }
+            elif (ascii_char == 91 or ascii_char == 93 or ascii_char == 123 or
+                  ascii_char == 125):
+                tipo = "other_delimiter"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Caso o caractere seja um separador |
+            elif (ascii_char == 124):
+                tipo = "separator"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Outros caracteres ASCII
+            elif (ascii_char >= 32 and ascii_char <= 126):
                 tipo = "special"
+                char = [char_atual, tipo, self.linha_atual[1]]
+                self.insere_caractere(char)
+
+            # Demais caracteres são inválidos
+            else:
+                tipo = "invalid"
                 char = [char_atual, tipo, self.linha_atual[1]]
                 self.insere_caractere(char)
 

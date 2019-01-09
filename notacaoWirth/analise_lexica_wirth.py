@@ -1,9 +1,10 @@
+
 from nucleoMotorEventos.nucleo_motor_eventos import (
     NucleoMotorEventos,
     Evento
 )
-from analisadorLexicoSintatico.automato_reconhecedor_lexico import (
-    AutomatoReconhecedorLexico
+from notacaoWirth.automato_reconhecedor_lexico_wirth import (
+    AutomatoReconhecedorLexicoWirth
 )
 
 # Eventos que ocorrem durante a análise léxica:
@@ -16,59 +17,24 @@ ler_char = Evento("ler_char", 2)
 criar_atomo = Evento("criar_atomo", 3)
 
 
-class AnalisadorLexico(NucleoMotorEventos):
+class AnalisadorLexicoWirth(NucleoMotorEventos):
     def __init__(self):
         NucleoMotorEventos.__init__(self)
         # Variáveis auxiliares
-        # Reserved: “ABS” | “ATN” | “COS” | “DATA” | “DEF” | “DIM” |
-        # “END” | “EXP” | “FN” | “FOR” | “GO” | “GOSUB” | “GOTO” | “IF” | “INT”
-        # | “LET” | “LOG” | “NEXT” | “PRINT” | “READ” | “REM” | “RETURN” |
-        # “RND” | “SIN” | “SQR” | “STEP” | “TAN” | “THEN” | “TO” .
-        self.lista_reservadas = [["ABS", "method", 1],
-                                 ["ATN", "method", 2],
-                                 ["COS", "method", 3],
-                                 ["DATA", "data", 4],
-                                 ["DEF", "define", 5],
-                                 ["DIM", "matrix", 6],
-                                 ["END", "ending", 7],
-                                 ["EXP", "method", 8],
-                                 ["FN", "function", 9],
-                                 ["FOR", "forloop", 10],
-                                 ["GO", "jump", 11],
-                                 ["GOSUB", "jump", 12],
-                                 ["GOTO", "jump", 13],
-                                 ["IF", "conditional", 14],
-                                 ["INT", "integer", 15],
-                                 ["LET", "attribution", 16],
-                                 ["LOG", "method", 17],
-                                 ["NEXT", "nextiterator", 18],
-                                 ["PRINT", "print", 19],
-                                 ["READ", "read", 20],
-                                 ["REM", "remark", 21],
-                                 ["RETURN", "return", 22],
-                                 ["RND", "method", 23],
-                                 ["SIN", "method", 24],
-                                 ["SQR", "method", 25],
-                                 ["STEP", "step", 26],
-                                 ["TAN", "method", 27],
-                                 ["THEN", "resultconditional", 28],
-                                 ["TO", "jumpto", 29]]
+        # (Não há palavras reservadas)
 
-        self.lista_identificadores = []
-        # Outros átomos terminais:
+        # Átomos terminais:
+        # Terminal = " { any_char_but_invalid }"
         # Assignment = “=”
-        # Comparison = “==” | “<” | “<=” | “<>” | “>=” | “>”
-        # ArithmeticPlusMinus = “+” | “-”
-        # ArithmeticOther = “*” | “/” | “^”
+        # Separator = "|"
         # Dot = “.”
-        # Comma = “,”
         # Quotation = “””
-        # DelimiterOpen = “(“
-        # DelimiterClose = “)”
+        # Delimiters = "(", ")", "[", "]", "{", "}"
+        self.lista_identificadores = []
         self.pos_atual = 0
         self.lista_atomos = []
         self.atomo_atual = []
-        self.reconhecedor = AutomatoReconhecedorLexico()
+        self.reconhecedor = AutomatoReconhecedorLexicoWirth()
 
     # Tratamento do evento de leitura da lista de caracteres
     def ler_lista_char(self, lista_caracteres, imprime_lista_caracteres):
@@ -98,17 +64,13 @@ class AnalisadorLexico(NucleoMotorEventos):
         # Letter
         # Digit
         # Special
+        # Invalid
         # Whitespace = “ “ | TABULAÇÃO | FIM DE LINHA
         # Assignment = “=”
-        # ComparisonGreater = “>”
-        # ComparisonLess = “<”
-        # ArithmeticPlusMinus = “+” | “-”
-        # ArithmeticOther = “*” | “/” | “^”
         # Dot = “.”
-        # Comma = “,”
+        # Separator = "|"
         # Quotation = “””
-        # DelimiterOpen = “(“
-        # DelimiterClose = “)”
+        # Delimiters = “(”, ")", "[", "]", "{", "}"
 
         if (self.pos_atual < len(self.lista_char)):
             # Obtém próximo caractere
@@ -163,47 +125,39 @@ class AnalisadorLexico(NucleoMotorEventos):
         # atomo_final[0] -> string
         # atomo_final[1] -> tipo do átomo
         # atomo_final[2] -> linha
-        self.atomo_final = self.reconhecedor.reconhece_cadeia(cadeia)
+        # atomo_final[3] -> ID identificador
 
-        # Tipo do átomo terminal
-        tipo_terminal = self.atomo_final[1]
+        # Reconhece átomos
+        self.lista_atomos_finais = list(
+            self.reconhecedor.reconhece_cadeia(cadeia)
+        )
 
-        # Se for inválido
-        if (tipo_terminal == "invalid"):
-            aux = ""
-            for char in cadeia:
-                aux += char[0]
+        for atomo_final in self.lista_atomos_finais:
+            self.atomo_final = list(atomo_final)
+            # Tipo do átomo terminal
+            tipo_terminal = self.atomo_final[1]
 
-            # Imprime no terminal uma mensagem de erro
-            print("Atomo invalido: '%s', linha %s" % (aux,
-                                                      self.atomo_final[2]))
+            # Se for inválido
+            if (tipo_terminal == "invalid"):
+                aux = ""
+                for char in cadeia:
+                    aux += char[0]
 
-            # Imprime no arquivo de saída a mensagem de erro
-            arq_saida = open("saida_analisador_lexico.txt", "w")
-            arq_saida.write("Atomo invalido: '%s', linha %s" % (
-                aux,
-                self.atomo_final[2])
-            )
-            arq_saida.close()
-            return False
+                # Imprime no terminal uma mensagem de erro
+                print("Atomo invalido: '%s', linha %s" % (aux,
+                                                          self.atomo_final[2]))
 
-        # Se for identificador
-        elif (tipo_terminal == "identifier"):
-            # Verifica se é uma palavra reservada
-            reservada = self.palavra_reservada(self.atomo_final[0])
-            tipo_reservada = self.lista_reservadas[reservada[1] - 1][1]
+                # Imprime no arquivo de saída a mensagem de erro
+                arq_saida = open("saida_analisador_lexico.txt", "w")
+                arq_saida.write("Atomo invalido: '%s', linha %s" % (
+                    aux,
+                    self.atomo_final[2])
+                )
+                arq_saida.close()
+                return False
 
-            # Caso seja reservada
-            if (reservada[0]):
-                # Substitui tipo de identifier para reserved
-                self.atomo_final.insert(1, str(tipo_reservada))
-                self.atomo_final.remove("identifier")
-
-                # Insere átomo na lista de átomos
-                self.lista_atomos.append(list(self.atomo_final))
-
-            # Caso seja identificador
-            else:
+            # Se for identificador
+            elif (tipo_terminal == "identifier"):
                 # Verifica se o identificador existe
                 ident = self.identificador(self.atomo_final[0])
 
@@ -227,39 +181,33 @@ class AnalisadorLexico(NucleoMotorEventos):
                     # Insere átomo na lista de átomos
                     self.lista_atomos.append(list(self.atomo_final))
 
-        # Insere o resto na lista de átomos
-        else:
-            self.lista_atomos.append(self.atomo_final)
+            # Se for terminal
+            elif (tipo_terminal == "terminal"):
+                self.lista_atomos.append(list(self.atomo_final))
 
-        # Insere evento de leitura de caractere
-        self.lista_eventos.append(ler_char)
+            # Insere o resto na lista de átomos
+            else:
+                self.lista_atomos.append(list(self.atomo_final))
 
-        # Caso a impressão de átomos esteja ativa
-        if (self.imprime_atomos):
-            atomo = self.atomo_final
-            string_atomo = atomo[0]
-            tipo = atomo[1]
-            linha = atomo[2]
+            # Insere evento de leitura de caractere
+            self.lista_eventos.append(ler_char)
 
-            print("Linha: ", str(linha), ", Atomo: '", string_atomo,
-                  "', Tipo: ", tipo)
+            # Caso a impressão de átomos esteja ativa
+            if (self.imprime_atomos):
+                atomo = self.atomo_final
+                string_atomo = atomo[0]
+                tipo = atomo[1]
+                linha = atomo[2]
 
-        # Limpa átomo atual
-        self.atomo_atual = []
+                print("Linha:", str(linha), ", Atomo: '", string_atomo,
+                      "', Tipo:", tipo)
+
+            # Limpa átomo atual
+            self.atomo_atual = []
 
         return True
 
     # *** FUNÇÕES AUXILIARES ***
-    # Função que verifica se o átomo é uma palavra reservada, varrendo a lista
-    # até que encontre (ou não) a ocorrência da palavra
-    def palavra_reservada(self, atomo):
-        for palavra in self.lista_reservadas:
-            # Se for, retorna True e o ID da palavra reservada
-            if (atomo == palavra[0]):
-                return [True, palavra[2]]
-        # Caso não encontre
-        return [False, 0]
-
     # Função que verifica se o átomo é um identificador já registrado ou não,
     # varrendo a lista de identificadores previamente encontrados
     def identificador(self, atomo):
@@ -327,7 +275,7 @@ class AnalisadorLexico(NucleoMotorEventos):
             arq_saida = open("saida_analisador_lexico.txt", "w")
 
             # Percorre a lista de átomos
-            arq_saida.write("*** INICIO DA LISTA DE ATOMOS ***")
+            arq_saida.write("*** INICIO DA LISTA DE ATOMOS ***\n")
             for atomo in self.lista_atomos:
                 string_atomo = atomo[0]
                 tipo = atomo[1]
