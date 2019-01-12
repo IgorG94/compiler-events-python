@@ -1,0 +1,24 @@
+INIT @ /0000
+JP MAIN
+MAIN LV /0000
+00 LV /01
+ MM T0
+ LV /0
+ + T0
+ MM A1
+05 JP 15
+10 LD A1
+ MM T1
+ LV /03
+ MM T2
+ LV /0
+ + T1
+ * T2
+ MM A1
+15 LD A1
+ A1 DS /1
+ T0 DS /1
+ A1 DS /1
+ T1 DS /1
+ T2 DS /1
+ HM MAIN

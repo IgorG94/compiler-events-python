@@ -1,0 +1,4 @@
+00 LET A1 = 8
+10 LET A2 = 3 * (A1 + 4)
+20 PRINT A2
+30 END
